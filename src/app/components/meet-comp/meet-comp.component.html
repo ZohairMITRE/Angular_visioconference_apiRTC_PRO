@@ -1,0 +1,24 @@
+<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-010 ui-grid-vcenter" 
+style="text-align: center;
+vertical-align: middle !important; 
+background-color:white !important;
+padding: 80px 0;
+margin-left: 240px;
+padding-bottom: 21.%;
+  ">
+    <div class="ng-scope">
+        <h3>Nous avons adapté Google Meet, notre service de visioconférence professionnel sécurisé, afin de le rendre disponible pour notre equipe SQUADMATE.</h3>
+        <br /><br /><br />
+        <div class="form-horizontal" style="margin: 150px;">
+            <button type="button" (click)="onSubmit()" class="btn btn-info mb-2"> Nouvelle Réunion</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="button" (click)="planifier_reunion()" class="btn btn-info mb-2"><i class="fa fa-calendar" aria-hidden="true"></i> Planifer une réunion</button>
+            <br /><br />
+            <form (ngSubmit)="onSubmit2($event)">
+                <input name="player" class="form-control " style="margin: 50px;margin-right: 80px;" type="text" placeholder="Saisir le code d'une réunion.">
+                <button  (click)="acceder_reunion()" class="btn"><i class="fas fa-video"></i> &nbsp;&nbsp; Entrer</button>    
+            </form>
+         </div>
+    </div>
+</div>
+

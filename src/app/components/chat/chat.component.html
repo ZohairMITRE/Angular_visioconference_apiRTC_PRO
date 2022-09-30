@@ -1,0 +1,58 @@
+
+
+  <div style="background-color:#F88F58;  
+width:280px; color:#6667AB;
+position: fixed;
+  top: 68px;
+  bottom: 0;
+  left: 240px;
+  padding: 58px 0 0; 
+  width: -webkit-fill-available;" >
+    <div class="container-fluid">
+      <form [formGroup]="conversationFormGroup" (ngSubmit)="getOrcreateConversation()">
+          <mat-form-field>
+              <mat-label><h5>Conversation Name</h5></mat-label>
+              <input type="text" matInput placeholder="abcd" formControlName="name">
+          </mat-form-field>&nbsp;
+          <button mat-raised-button  type="submit" [disabled]="!conversationFormGroup.valid" title="Get Or Create Conversation">GetOrCreateConversation</button>
+          <button mat-raised-button   >HangUp</button>
+        </form>
+      <mat-grid-list cols="3" rowHeight="3:2">
+        <mat-grid-tile>
+          <div id="local-container">
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <div id="remote-container">
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <div id="remote-container2">
+          </div>
+        </mat-grid-tile>
+      </mat-grid-list>
+  </div>
+
+
+  <div id="container">
+    <div id="buttons">
+        <button id="startButton">Start</button>
+        <button id="sendButton" disabled>Send</button>
+        <button id="closeButton" disabled>Stop</button>
+    </div>
+
+    <div id="sendReceive">
+        <div id="send">
+            <h2>Send</h2>
+            <textarea id="dataChannelSend" disabled
+                      placeholder="Press Start, enter some text, then press Send."></textarea>
+        </div>
+        <div id="receive">
+            <h2>Receive</h2>
+            <textarea id="dataChannelReceive" disabled></textarea>
+        </div>
+    </div>
+
+</div>
+
+  </div>
